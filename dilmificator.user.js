@@ -3,7 +3,7 @@
 // @namespace   Dirk-BR
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js
 // @match       https://muquiranas.com/*/
-// @version     beta 0.2
+// @version     beta 0.3
 // @author      Dirk
 // @description 
 // Troca o conteúdo de comentários de uma base de usuários por frases aleatórias da Dilma. 
@@ -98,9 +98,18 @@ $("#delNick").click(function() {
   if (i > -1) {
     malas.splice(i, 1);
   }
+  
+  $('.comment-body').each(function(i){
+    if((nomeMala + ' Rousseff') == $(this).find('.fn').text()){ 
+      $(this).find('.fn').text(nomeMala);
+      $(this).find('.comentarioDilmistico').remove();    
+      $(this).find('.comentarioOculto').contents().unwrap();
+    }
+  });
+  
   $('#comboMalas').html("");
   GM.setValue("malas", JSON.stringify(malas));
-  $('#avisosDilmificator').html("O mala <strong>" + nomeMala + "</strong> não será mais dilmificado! :(<br>Atualize a página para voltar a ver as mensagens dele.");
+  $('#avisosDilmificator').html("O mala <strong>" + nomeMala + "</strong> não será mais dilmificado! :(<br>As mensagens foram restauradas.");
   listarMalas();
   dilmificator();
 });
