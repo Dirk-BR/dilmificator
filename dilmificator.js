@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name        Muquirana Dilmificator
-// @namespace   Dirk Produções
+// @namespace   Dirk-BR
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js
 // @match       https://muquiranas.com/*/
 // @version     beta 0.1
 // @author      Dirk
-// @description Troca o conteúdo de comentários de uma base de usuários por frases aleatórias da Dilma. 
+// @description 
+// Troca o conteúdo de comentários de uma base de usuários por frases aleatórias da Dilma. 
 // Sabe aquele usuário que te irrita? 
 // Agora você pode se divertir enquanto (não) lê as mensagens dele!
 // @grant       GM.setValue
