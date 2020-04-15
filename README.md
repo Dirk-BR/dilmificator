@@ -1,5 +1,9 @@
 # Muquirana Dilmificator
-Script de usuário para o blog Muquiranas.com.
+Script de usuário para o blog Muquiranas.com que troca o conteúdo de comentários dos usuários de sua escolha por frases aleatórias da Dilma. 
+
+Sabe aquele usuário que te irrita? Que você preferiria que não comentasse mais?
+
+Agora você pode se divertir enquanto (não) lê as mensagens dele!
 
 # Instalação
 
