@@ -1,5 +1,5 @@
-# dilmificator
-Script de usuário Greasemonkey para o blog Muquiranas.com.
+# Muquirana Dilmificator
+Script de usuário para o blog Muquiranas.com.
 
 # Instalação
 
