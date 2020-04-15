@@ -5,11 +5,11 @@ Script de usuário para o blog Muquiranas.com.
 
 É necessário utilizar um navegador com o complemento de scripts de usuário instalado.
 
-No <strong>Firefox</strong>, recomendo o Greasemonkey. <a href="https://addons.mozilla.org/pt-br/firefox/addon/greasemonkey/">Para instalar, clique aqui</a> e selecione a opção “Add to Firefox”. Se necessário, reinicie o Firefox após a instalação.
+No <strong>Firefox</strong>, recomendo o Greasemonkey. <a href="https://addons.mozilla.org/pt-br/firefox/addon/greasemonkey/" target="_blank">Para instalar, clique aqui</a> e selecione a opção “Add to Firefox”. Se necessário, reinicie o Firefox após a instalação.
 
-No <strong>Chrome</strong>, você pode usar o Tampermonkey. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=pt-BR">Para instalar, clique aqui</a> e selecione a opção "Usar no Chrome".
+No <strong>Chrome</strong>, você pode usar o Tampermonkey. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=pt-BR" target="_blank">Para instalar, clique aqui</a> e selecione a opção "Usar no Chrome".
 
-Com o complemento instalado, <a href="https://github.com/Dirk-BR/dilmificator/raw/master/dilmificator.js">clique aqui para instalar o script</a>.
+Com o complemento instalado, <a href="https://github.com/Dirk-BR/dilmificator/raw/master/dilmificator.js" target="_blank">clique aqui para instalar o script</a>.
 
 # Uso
 
