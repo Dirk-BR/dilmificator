@@ -21,4 +21,4 @@ Aparecerá uma caixa intitulada "Muquirana Dilmificator" após o campo de escrev
 
 Nessa caixa, você pode escrever o nick do muquirana a ser dilmificado e adicionar à lista. <strong>Para evitar problemas com nicks parecidos</strong>, é obrigatório escrever exatamente da forma que o usuário utiliza (com maiúsculas, minúsculas, espaços e símbolos).
 
-Se mudar de ideia, basta selecionar o nick na lista e clicar no botão de remoção. Observe que, nesse caso, será necessário atualizar a página (F5) para voltar a ver os comentários daquele usuário antes dilmificados.
+Se mudar de ideia, basta selecionar o nick na lista e clicar no botão de remoção. Observe que, nesse caso, será necessário atualizar a página (F5) para voltar a ver os comentários daquele usuário antes dilmificado.
