@@ -3,7 +3,7 @@
 // @namespace   Dirk-BR
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js
 // @match       https://muquiranas.com/*/
-// @version     beta 0.1
+// @version     beta 0.2
 // @author      Dirk
 // @description 
 // Troca o conteúdo de comentários de uma base de usuários por frases aleatórias da Dilma. 
@@ -13,6 +13,7 @@
 // @grant       GM.getValue
 // ==/UserScript==
 
+// inicialização
 const DILMES = ["Se hoje é o dia das crianças... Ontem eu disse: o dia da criança é o dia da mãe, dos pais, das professoras, mas também é o dia dos animais, sempre que você olha uma criança, há sempre uma figura oculta, que é um cachorro atrás. O que é algo muito importante!",
                 "A população ela precisa da Zona Franca de Manaus, porque na Zona franca de Manaus, não é uma zona de exportação, é uma zona para o Brasil. Portanto ela tem um objetivo, ela evita o desmatamento, que é altamente lucravito. Derrubar arvores da natureza é muito lucrativo!",
                 "Primeiro eu queria cumprimentar os internautas. -Oi Internautas! Depois dizer que o meio ambiente é sem dúvida nenhuma uma ameaça ao desenvolvimento sustentável. E isso significa que é uma ameaça pro futuro do nosso planeta e dos nossos países. O desemprego beira 20%, ou seja, 1 em cada 4 portugueses.",
@@ -47,17 +48,15 @@ function dilmificator() {
 $('.comment-body').each(function(i){
   if(malas.indexOf($(this).find('.fn').text())>-1){
     $(this).find('.fn').text($(this).find('.fn').text() + " Rousseff");
-    $(this).find('.comment-text').html("<p style='color: #999999'>" + DILMES[Math.floor(Math.random()*TAMDILMES)] + "</p>");
+    $(this).find('.comment-text').html("<div class='comentarioOculto' style='display: none;'>" + $(this).find('.comment-text').html() + "</div><div class='comentarioDilmistico'><p style='color: #999999'>" + DILMES[Math.floor(Math.random()*TAMDILMES)] + "</p></div>");
   }
 })
-
 }
+
 
 dilmificator();        
 
-setInterval(function() {
-        dilmificator();
-    }, 5000);
+setInterval(dilmificator, 5000);
 
 
 $('#comment-pagination').append('<div style="background-color: #fdffd4; border: 1px solid #dfdfdf;"><div style="margin: -10px 10px 15px 10px; display: grid;"><h4>Muquirana Dilmificator</h4><input type="text" id="usuario" placeholder="Digite aqui o nome do mala a ser Dilmificado"><button id="addNick" type="button">Adicionar Mala</button><br><select id="comboMalas" style="padding: 5px;"></select><button id="delNick" type="button">Remover Mala</button><p id="avisosDilmificator" style="text-align: center; color: #396ab3; margin-top: 10px; background-color: #FFF;"></p></div></div>');
@@ -70,17 +69,24 @@ function listarMalas() {
   { 
     $('#comboMalas').append( new Option(el, el) );
     $('#comboMalas').val(el);
-    console.log(el);
   });
 }
 
 listarMalas();
 
+$(document).delegate('.comment-text', 'click', function(event){
+  event.stopPropagation();
+  event.stopImmediatePropagation();
+  $(this).parent().find('.comentarioOculto').toggle();
+  $(this).parent().find('.comentarioDilmistico').toggle();
+});
+  
+
 $("#addNick").click(function() {
   malas.push(usuario.value);
   GM.setValue("malas", JSON.stringify(malas));
   $('#comboMalas').html("");
-  $('#avisosDilmificator').html("Mala <strong>" + usuario.value + "</strong> Dilmificado! Você pode adicionar quantos quiser.");
+  $('#avisosDilmificator').html("Mala <strong>" + usuario.value + "</strong> dilmificado! Você pode revelar a mensagem original ao clicar sobre o texto dilmificado.");
   usuario.value="";
   listarMalas();
   dilmificator();
@@ -94,7 +100,7 @@ $("#delNick").click(function() {
   }
   $('#comboMalas').html("");
   GM.setValue("malas", JSON.stringify(malas));
-  $('#avisosDilmificator').html("O mala <strong>" + nomeMala + "</strong> não será mais Dilmificado! :(<br>Atualize a página para voltar a ver as mensagens dele.");
+  $('#avisosDilmificator').html("O mala <strong>" + nomeMala + "</strong> não será mais dilmificado! :(<br>Atualize a página para voltar a ver as mensagens dele.");
   listarMalas();
   dilmificator();
 });
