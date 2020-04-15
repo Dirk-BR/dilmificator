@@ -7,7 +7,7 @@ Script de usuário Greasemonkey para o blog Muquiranas.com.
 
 No <strong>Firefox</strong>, recomendo o Greasemonkey. <a href="https://addons.mozilla.org/pt-br/firefox/addon/greasemonkey/">Para instalar, clique aqui</a> e selecione a opção “Add to Firefox”. Se necessário, reinicie o Firefox após a instalação.
 
-No <strong>Chrome</strong>, você pode usar o Tampermoney. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=pt-BR">Para instalar, clique aqui</a> e selecione a opção "Usar no Chrome".
+No <strong>Chrome</strong>, você pode usar o Tampermonkey. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=pt-BR">Para instalar, clique aqui</a> e selecione a opção "Usar no Chrome".
 
 Com o complemento instalado, <a href="https://github.com/Dirk-BR/dilmificator/raw/master/dilmificator.js">clique aqui para instalar o script</a>.
 
