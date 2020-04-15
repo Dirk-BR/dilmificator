@@ -9,7 +9,7 @@ No <strong>Firefox</strong>, recomendo o Greasemonkey. <a href="https://addons.m
 
 No <strong>Chrome</strong>, você pode usar o Tampermonkey. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=pt-BR" target="_blank">Para instalar, clique aqui</a> e selecione a opção "Usar no Chrome".
 
-Com o complemento instalado, <a href="https://github.com/Dirk-BR/dilmificator/raw/master/dilmificator.js" target="_blank">clique aqui para instalar o script</a>.
+Com o complemento instalado, <a href="https://github.com/Dirk-BR/dilmificator/raw/master/dilmificator.user.js" target="_blank">clique aqui para instalar o script</a>.
 
 # Uso
 
